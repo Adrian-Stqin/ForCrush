@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARA SAKING CRUSH</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: linear-gradient(to bottom right, #ff9a9e, #fad0c4, #fbc2eb);
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 182, 193, 0.3); /* Soft pink with transparency */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .gift-container {
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            gap: 15px;
+            justify-content: center;
+        }
+        .gift {
+            width: 80px;
+            height: 80px;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: #ffb6c1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .gift:hover {
+            transform: scale(1.1);
+            background-color: #ff6f91;
+        }
+        #message {
+            font-size: 1.8em;
+            margin-top: 20px;
+            padding: 10px;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.6); /* Darker background for better readability */
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PILI KA BILIS 🥰</h1>
+        <div class="gift-container">
+            <div class="gift" onclick="revealMessage()">🎁</div>
+            <div class="gift" onclick="revealMessage()">🎁</div>
+            <div class="gift" onclick="revealMessage()">🎁</div>
+            <div class="gift" onclick="revealMessage()">🎁</div>
+            <div class="gift" onclick="revealMessage()">🎁</div>
+            <div class="gift" onclick="revealMessage()">🎁</div>
+            <div class="gift" onclick="revealMessage()">🎁</div>
+            <div class="gift" onclick="revealMessage()">🎁</div>
+            <div class="gift" onclick="revealMessage()">🎁</div>
+        </div>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        const messages = [
+            "CHAT MOKO",
+            "CRUSHBACK",
+            "HUG",
+            "KISS",
+            "HOLD MY HAND",
+            "SABAY TAYO UWI",
+            "SABAY TAYO PASOK",
+            "SABAY TAYO RECESS",
+            "AKO NA LNG HAHA"
+        ];
+
+        function revealMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            const message = messages[randomIndex];
+            document.getElementById("message").innerText = message;
+        }
+    </script>
+</body>
+</html>
